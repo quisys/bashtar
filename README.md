@@ -4,7 +4,7 @@ Simple guitar in bash
 # dependencies
 `bash`
 
-ALSA (or pulseaudio) and `alsa-utils` (usually, see here)
+ALSA (or pulseaudio) and `alsa-utils` (usually, see [here](https://github.com/quisys/bashtar/blob/main/README.md#mac-compatibility))
 
 # installation
 ## \*nix
