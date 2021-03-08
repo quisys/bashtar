@@ -181,7 +181,7 @@ do
 	clear
 	checkinput
 done
-elif [ $1 == "--help" ]
+elif [ $1 == "--help" ] || [ $1 == "-h" ]
 then
 	echo "bashtar is a program that plays guitar sounds on keypresses.
 keys are similar to a guitar; 1 plays an open e, 2 plays an open a and so on.
