@@ -189,4 +189,6 @@ q plays an f on the e string, w plays an a sharp and so on.
 basically, the first 6 numbers are open strings and the alpha keys are the fretboard.
 
 example: open b string = 5, first fret = t, second = g, third = b"
+else
+	echo "$1: option not recognized"
 fi
