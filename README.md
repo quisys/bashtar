@@ -5,6 +5,7 @@ Simple guitar in bash
 `bash`
 
 ALSA (or pulseaudio) [Linux only]
+
 `alsa-utils` (Linux) or `sox` (Mac)
 
 # installation
