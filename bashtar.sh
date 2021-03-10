@@ -83,14 +83,14 @@ play() {
 aplay sounds/$1.wav >/dev/null 2>&1 &
 }
 
-if [ -z $1]
+if [ -z $1 ]
 then
 while true
 do
 	clear
 	checkinput
 done
-elif [ $1 == "--help" ] || [ $1 == "-h"]
+elif [ $1 == "--help" ] || [ $1 == "-h" ]
 then
 	echo "bashtar is a program that plays guitar sounds on keypresses.
 keys are similar to a guitar; 1 plays an open e, 2 plays an open a and so on.
@@ -101,4 +101,3 @@ example: open b string = 5, first fret = t, second = g, third = b"
 else
 	echo "$1: option not recognized"
 fi
-
