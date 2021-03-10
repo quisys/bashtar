@@ -3,100 +3,132 @@
 checkinput() {
 read -s -N 1 -p "bashtar!
 quit with ^C. --help for help" note
-	if [ $note == 1 ]
-	then
+
+case $note in
+
+	1)
 		play "e"
-	elif [ $note == 2 ]
-	then
+		;;
+
+	2)
 		play "a"
-	elif [ $note == 3 ]
-	then
+		;;
+
+	3)
 		play "d"
-	elif [ $note == 4 ]
-	then
+		;;
+
+	4)
 		play "g"
-	elif [ $note == 5 ]
-	then
+		;;
+
+	5)
 		play "b"
-	elif [ $note == 6 ]
-	then
+		;;
+
+	6)
 		play "high-e"
-	elif [ $note == q ]
-	then
+		;;
+
+	q)
 		play "f"
-	elif [ $note == w ]
-	then
+		;;
+
+	w)
 		play "a-sharp"
-	elif [ $note == e ]
-	then
+		;;
+
+	e)
 		play "d-sharp"
-	elif [ $note == r ]
-	then
+		;;
+
+	r)
 		play "g-sharp"
-	elif [ $note == t ]
-	then
+		;;
+
+	t)
 		play "c"
-	elif [ $note == y ]
-	then
+		;;
+
+	y)
 		play "f-on-high-e"
-	elif [ $note == a ]
-	then
+		;;
+
+	a)
 		play "f-sharp"
-	elif [ $note == s ]
-	then
+		;;
+
+	s)
 		play "b-on-a"
-	elif [ $note == d ]
-	then
+		;;
+
+	d)
 		play "e-on-d"
-	elif [ $note == f ]
-	then
+		;;
+
+	f)
 		play "a-on-g"
-	elif [ $note == g ]
-	then
+		;;
+
+	g)
 		play "c-sharp"
-	elif [ $note == h ]
-	then
+		;;
+
+	h)
 		play "f-sharp-on-high-e"
-	elif [ $note == z ]
-	then
+		;;
+
+	z)
 		play "g-on-e"
-	elif [ $note == x ]
-	then
+		;;
+
+	x)
 		play "c-on-a"
-	elif [ $note == c ]
-	then
+		;;
+
+	c)
 		play "f-on-d"
-	elif [ $note == v ]
-	then
+		;;
+
+	v)
 		play "a-sharp-on-g"
-	elif [ $note == b ]
-	then
+		;;
+
+	b)
 		play "d-on-b"
-	elif [ $note == n ]
-	then
+		;;
+
+	n)
 		play "g-on-high-e"
-	fi
+		;;
+esac
 }
 
 play() {
 aplay sounds/$1.wav >/dev/null 2>&1 &
 }
 
-if [ -z $1 ]
-then
-while true
-do
-	clear
-	checkinput
-done
-elif [ $1 == "--help" ] || [ $1 == "-h" ]
-then
-	echo "bashtar is a program that plays guitar sounds on keypresses.
+helptxt() {
+echo "bashtar is a program that plays guitar sounds on keypresses.
 keys are similar to a guitar; 1 plays an open e, 2 plays an open a and so on.
 q plays an f on the e string, w plays an a sharp and so on.
 basically, the first 6 numbers are open strings and the alpha keys are the fretboard.
 
 example: open b string = 5, first fret = t, second = g, third = b"
-else
-	echo "$1: option not recognized"
+}
+
+
+if [ -z $1 ]
+	then
+	while true
+do
+	clear
+	checkinput
+done 
+elif 
+	[ $1 == "--help" ] || [ $1 == "-h" ]
+	then	
+	helptxt
+	else
+			echo "$1: option not recognized"
 fi
