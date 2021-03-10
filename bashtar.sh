@@ -5,173 +5,81 @@ read -s -N 1 -p "bashtar!
 quit with ^C. --help for help" note
 	if [ $note == 1 ]
 	then
-		play-e
+		play "e"
 	elif [ $note == 2 ]
 	then
-		play-a
+		play "a"
 	elif [ $note == 3 ]
 	then
-		play-d
+		play "d"
 	elif [ $note == 4 ]
 	then
-		play-g
+		play "g"
 	elif [ $note == 5 ]
 	then
-		play-b
+		play "b"
 	elif [ $note == 6 ]
 	then
-		play-high-e
+		play "high-e"
 	elif [ $note == q ]
 	then
-		play-f
+		play "f"
 	elif [ $note == w ]
 	then
-		play-a-sharp
+		play "a-sharp"
 	elif [ $note == e ]
 	then
-		play-d-sharp
+		play "d-sharp"
 	elif [ $note == r ]
 	then
-		play-g-sharp
+		play "g-sharp"
 	elif [ $note == t ]
 	then
-		play-c
+		play "c"
 	elif [ $note == y ]
 	then
-		play-f-on-high-e
+		play "f-on-high-e"
 	elif [ $note == a ]
 	then
-		play-f-sharp
+		play "f-sharp"
 	elif [ $note == s ]
 	then
-		play-b-on-a
+		play "b-on-a"
 	elif [ $note == d ]
 	then
-		play-e-on-d
+		play "e-on-d"
 	elif [ $note == f ]
 	then
-		play-a-on-g
+		play "a-on-g"
 	elif [ $note == g ]
 	then
-		play-c-sharp
+		play "c-sharp"
 	elif [ $note == h ]
 	then
-		play-f-sharp-on-high-e
+		play "f-sharp-on-high-e"
 	elif [ $note == z ]
 	then
-		play-g-on-e
+		play "g-on-e"
 	elif [ $note == x ]
 	then
-		play-c-on-a
+		play "c-on-a"
 	elif [ $note == c ]
 	then
-		play-f-on-d
+		play "f-on-d"
 	elif [ $note == v ]
 	then
-		play-a-sharp-on-g
+		play "a-sharp-on-g"
 	elif [ $note == b ]
 	then
-		play-d-on-b
+		play "d-on-b"
 	elif [ $note == n ]
 	then
-		play-g-on-high-e
+		play "g-on-high-e"
 	fi
 }
 
-play-e() {
-aplay sounds/e.wav >/dev/null 2>&1 &
-}
-
-play-a() {
-aplay sounds/a.wav >/dev/null 2>&1 &
-}
-
-play-d() {
-aplay sounds/d.wav >/dev/null 2>&1 &
-}
-
-play-g() {
-aplay sounds/g.wav >/dev/null 2>&1 &
-}
-
-play-b() {
-aplay sounds/b.wav >/dev/null 2>&1 &
-}
-
-play-high-e() {
-aplay sounds/high-e.wav >/dev/null 2>&1 &
-}
-
-play-f() {
-aplay sounds/f.wav >/dev/null 2>&1 &
-}
-
-play-a-sharp() {
-aplay sounds/a-sharp.wav >/dev/null 2>&1 &
-}
-
-play-d-sharp() {
-aplay sounds/d-sharp.wav >/dev/null 2>&1 &
-}
-
-play-g-sharp() {
-aplay sounds/g-sharp.wav >/dev/null 2>&1 &
-}
-
-play-c() {
-aplay sounds/c.wav >/dev/null 2>&1 &
-}
-
-play-f-on-high-e() {
-aplay sounds/f-on-high-e.wav >/dev/null 2>&1 &
-}
-
-play-f-sharp() {
-aplay sounds/f-sharp.wav >/dev/null 2>&1 &
-}
-
-play-b-on-a() {
-aplay sounds/b-on-a.wav >/dev/null 2>&1 &
-}
-
-play-e-on-d() {
-aplay sounds/e-on-d.wav >/dev/null 2>&1 &
-}
-
-play-a-on-g() {
-aplay sounds/a-on-g.wav >/dev/null 2>&1 &
-}
-
-play-c-sharp() {
-aplay sounds/c-sharp.wav >/dev/null 2>&1 &
-}
-
-play-f-sharp-on-high-e() {
-aplay sounds/f-sharp-on-high-e.wav >/dev/null 2>&1 &
-}
-
-play-g-on-e() {
-aplay sounds/g-on-e.wav >/dev/null 2>&1 &
-}
-
-play-c-on-a() {
-aplay sounds/c-on-a.wav >/dev/null 2>&1 &
-}
-
-play-f-on-d() {
-aplay sounds/f-on-d.wav >/dev/null 2>&1 &
-}
-
-play-a-sharp-on-g() {
-aplay sounds/a-sharp-on-g.wav >/dev/null 2>&1 &
-}
-
-play-d-on-b() {
-aplay sounds/d-on-b.wav >/dev/null 2>&1 &
-}
-
-play-g-on-high-e() {
-aplay sounds/g-on-high-e.wav >/dev/null 2>&1 &
+play() {
+aplay sounds/$1.wav >/dev/null 2>&1 &
 }
 
 if [ -z $1 ]
