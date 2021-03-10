@@ -1,5 +1,5 @@
 # bashtar
-Simple guitar in bash
+Simple guitar toy in bash
 
 # dependencies
 `bash`
