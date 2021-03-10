@@ -4,7 +4,9 @@ Simple guitar in bash
 # dependencies
 `bash`
 
-ALSA (or pulseaudio) and `alsa-utils`
+ALSA (or pulseaudio) [Linux only]
+
+`alsa-utils` (Linux) or `sox` (Mac)
 
 # installation
 ## \*nix
@@ -13,6 +15,12 @@ ALSA (or pulseaudio) and `alsa-utils`
 `cd bashtar`
 
 `./bashtar.sh`
+
+## mac compatibility
+
+for this program to work on a Mac, it requires `aplay` to point to `sox`
+
+`sudo ln -s /usr/bin/sox /usr/bin/aplay`
 
 # usage
 
