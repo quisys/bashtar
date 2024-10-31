@@ -20,7 +20,7 @@ ALSA (or pulseaudio) [Linux only]
 
 for this program to work on a Mac, it requires `aplay` to point to `play`
 
-`sudo ln -s /usr/bin/play /usr/bin/aplay`
+`sudo ln -s /opt/homebrew/bin/play /opt/homebrew/bin/aplay`
 
 # usage
 
