@@ -18,9 +18,9 @@ ALSA (or pulseaudio) [Linux only]
 
 ## mac compatibility
 
-for this program to work on a Mac, it requires `aplay` to point to `sox`
+for this program to work on a Mac, it requires `aplay` to point to `play`
 
-`sudo ln -s /usr/bin/sox /usr/bin/aplay`
+`sudo ln -s /usr/bin/play /usr/bin/aplay`
 
 # usage
 
