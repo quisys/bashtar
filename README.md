@@ -4,23 +4,17 @@ Simple guitar toy in bash
 # dependencies
 `bash`
 
-ALSA (or pulseaudio) [Linux only]
+ALSA (or pulseaudio)
 
-`alsa-utils` (Linux) or `sox` (Mac)
+`alsa-utils`
 
 # installation
-## \*nix
+## Linux
 `git clone https://github.com/quisys/bashtar`
 
 `cd bashtar`
 
 `./bashtar.sh`
-
-## mac compatibility
-
-for this program to work on a Mac, it requires `aplay` to point to `play`
-
-`sudo ln -s /opt/homebrew/bin/play /opt/homebrew/bin/aplay`
 
 # usage
 
